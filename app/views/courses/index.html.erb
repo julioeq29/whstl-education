@@ -1,24 +1,45 @@
 <div class="container mt-3">
   <div class="row">
-    <div class="col-8">
-      <% @courses.each do |course| %>
-        <div class="card-course">
-          <div class="card-course-date">
-            <p>Monday</p>
-            <h2>26</h2>
-            <p>June</p>
-          </div>
-          <div class="card-course-infos">
-            <h2><%= course.name %></h2>
-            <p><%= course.description %></p>
-          </div>
-          <div class="card-course-progress">
-            <i class="fal fa-heart"></i>
-            <i class="fal fa-bookmark"></i>
-            <i class="fal fa-share-square"></i>
+
+    <div class="col-3" id="menu-bar-left">
+      <%= render 'shared/main_menu_bar' %>
+    </div>
+
+    <div class="col-9">
+
+      <div class="row">
+        <div class="menu-bar-top">
+          <div class="menu-bar-top-content">
+            <h3>Todos os meus cursos</h3>
           </div>
         </div>
-      <% end %>
+      </div>
+
+      <div class="row">
+        <div class="cards-courses-all">
+          <% @courses.each do |course| %>
+            <div class="card-course">
+              <div class="card-course-infos">
+                <h2><%= link_to course.name, course_lectures_path(course) %></h2>
+                <p><%= course.description %></p>
+              </div>
+              <div class="card-course-progress">
+                <div>
+                  <%= (0..20).to_a.sample.to_i %>
+                  <%= "/" %>
+                  <%= (20..38).to_a.sample.to_i %>
+                </div>
+                <div class="card-course-progress-icons">
+                  <i class="fal fa-heart"></i>
+                  <i class="fal fa-bookmark"></i>
+                  <i class="fal fa-share-square"></i>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>

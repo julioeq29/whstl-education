@@ -1,0 +1,36 @@
+#menu-bar-left {
+  border-right: 1px solid rgb(200, 200, 200);
+}
+
+.main-menu-bar {
+  padding: 16px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.main-menu-bar h1 {
+  font-size: 24px;
+}
+
+.menu-bar-content {
+  margin-top: 24px;
+  padding: 16px;
+}
+
+#menu-bar-content-top {
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.menu-bar-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-bar-section-header h3 {
+  font-size: 20px;
+}
+
+.menu-bar-options-list span {
+  text-decoration: none;
+  font-size: 12px;
+}

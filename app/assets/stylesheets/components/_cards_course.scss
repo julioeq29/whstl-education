@@ -1,12 +1,21 @@
+.cards-courses-all {
+  padding: 54px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin-top: -54px;
+}
+
 .card-course {
   overflow: hidden;
-  height: 120px;
+  height: 220px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
-  display: flex;
+  justify-content: space-between;
+  padding: 16px;
 }
 
 // .card-course img {
@@ -29,17 +38,27 @@
   margin-top: 8px;
 }
 
-.card-course .card-course-date {
-  padding: 16px;
-  width: 120px;
-}
-
 .card-course .card-course-infos {
   padding: 16px;
-  display-flex: 1;
+  width: auto;
 }
 
 .card-course .card-course-progress {
   padding: 16px;
-  width: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.card-course .card-course-progress-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.card-course .card-course-progress-icons i {
+}
+
+

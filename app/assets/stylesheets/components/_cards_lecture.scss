@@ -1,0 +1,71 @@
+.cards-lectures-all {
+  padding: 32px;
+  border-top: 1px solid rgb(200, 200, 200);
+}
+
+.card-lecture {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+// .card-course img {
+//   height: 100%;
+//   width: 120px;
+//   object-fit: cover;
+// }
+
+.card-lecture h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-lecture h3 {
+  font-size: 24px;
+}
+
+.card-lecture p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+}
+
+.card-lecture .card-lecture-date {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid rgb(200, 200, 200);
+}
+
+.card-lecture .card-lecture-infos {
+  padding: 16px;
+  width: 70%;
+}
+
+.card-lecture .card-lecture-infos p {
+  margin-top: 8px;
+}
+
+.card-lecture .card-lecture-progress {
+  padding: 16px;
+  width: 120px;
+}
+
+.card-lecture .card-lecture-progress-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+

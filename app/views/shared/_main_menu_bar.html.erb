@@ -1,0 +1,32 @@
+<div class="main-menu-bar">
+  <h1>Meu Dashboard</h1>
+</div>
+<div class="menu-bar-content" id="menu-bar-content-top">
+  <div class="menu-bar-section-header">
+    <h3>Meus Cursos</h3>
+    <i class="fal fa-keynote"></i>
+  </div>
+  <% @courses.each do |course| %>
+  <div class="menu-bar-options-list">
+    <span><%= link_to course.name, course_lectures_path(course) %></span>
+  </div>
+  <% end %>
+</div>
+<div class="menu-bar-content">
+  <div class="menu-bar-section-header">
+    <h3>Suporte</h3>
+    <i class="fal fa-user-headset"></i>
+  </div>
+  <div class="menu-bar-options-list">
+    <span>Comunidade</span>
+  </div>
+  <div class="menu-bar-options-list">
+    <span>Faça uma pergunta</span>
+  </div>
+  <div class="menu-bar-options-list">
+    <span>Contato suporte</span>
+  </div>
+  <div class="menu-bar-options-list">
+    <span>Reportar um problema</span>
+  </div>
+</div>

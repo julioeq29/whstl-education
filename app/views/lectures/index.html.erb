@@ -1,0 +1,66 @@
+<div class="container mt-3">
+  <div class="row">
+
+    <div class="col-3" id="menu-bar-left">
+      <%= render 'shared/main_menu_bar' %>
+    </div>
+
+    <div class="col-9">
+
+      <div class="row">
+        <div class="menu-bar-top">
+          <div class="menu-bar-top-content">
+            <h3><%= @course.name %></h3>
+          </div>
+          <div class="menu-bar-top-back-link">
+            <a href="/courses">
+              <i class="fal fa-arrow-to-left"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="tabs">
+          <ul class="list-inline tabs-underlined">
+            <li>
+              <a href="#" class="tab-underlined active">Curso</a>
+            </li>
+            <li>
+              <a href="#" class="tab-underlined">Flashcards</a>
+            </li>
+            <li>
+              <a href="#" class="tab-underlined">Vídeos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cards-lectures-all">
+          <% @course.lectures.each do |lecture| %>
+            <div class="card-lecture">
+              <div class="card-lecture-date">
+                <p><%= lecture.lecture_date.strftime('%A') %></p>
+                <h3><%= lecture.lecture_date.day %></h3>
+                <p><%= lecture.lecture_date.strftime('%B') %></p>
+              </div>
+              <div class="card-lecture-infos">
+                <h2><%= lecture.title %></h2>
+                <p><%= lecture.content %></p>
+              </div>
+              <div class="card-lecture-progress">
+                <div class="card-lecture-progress-icons">
+                  <i class="fal fa-heart"></i>
+                  <i class="fal fa-bookmark"></i>
+                  <i class="fal fa-share-square"></i>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
